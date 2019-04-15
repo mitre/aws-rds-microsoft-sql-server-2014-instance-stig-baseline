@@ -1,4 +1,4 @@
-# aws-rds-microsoft-sql-server-2014-stig-baseline
+# aws-rds-microsoft-sql-server-2014-database-stig-baseline
 
 InSpec profile to validate the secure configuration of AWS RDS Microsoft SQL Server 2014, against [DISA](https://iase.disa.mil/stigs/)'s **Microsoft Sql Server 2014 Security Technical Implementation Guide (STIG) Version 1, Release 9**.
 
@@ -11,13 +11,13 @@ Latest versions and installation options are available at the [InSpec](http://in
 
 ## Running This Profile
 
-    inspec exec https://github.com/mitre/aws-rds-microsoft-sql-server-2014-stig-baseline/archive/master.tar.gz -t winrm://<hostip> --user '<admin-account>' --password=<password> --reporter cli json:<filename>.json
+    inspec exec https://github.com/mitre/aws-rds-microsoft-sql-server-2014-database-stig-baseline/archive/master.tar.gz -t winrm://<hostip> --user '<admin-account>' --password=<password> --reporter cli json:<filename>.json
 
 Runs this profile over winrm to the host at IP address <hostip> as a privileged user account (i.e., an account with administrative privileges), reporting results to both the command line interface (cli) and to a machine-readable JSON file. 
     
 The following is an example of using this command. 
 
-    inspec exec https://github.com/mitre/aws-rds-microsoft-sql-server-2014-stig-baseline/archive/master.tar.gz -t winrm://$winhostip --user 'Administrator' --password=Pa55w0rd --reporter cli json:mssql-database-results.json
+    inspec exec https://github.com/mitre/aws-rds-microsoft-sql-server-2014-database-stig-baseline/archive/master.tar.gz -t winrm://$winhostip --user 'Administrator' --password=Pa55w0rd --reporter cli json:mssql-database-results.json
 
 ## Viewing the JSON Results
 
@@ -42,7 +42,7 @@ To contribute, please review the [contribution guidelines](https://github.com/mi
 
 ## License 
 
-* This project is licensed under the terms of the [Apache 2.0 license](https://github.com/mitre/aws-rds-microsoft-sql-server-2014-stig-baseline/blob/master/LICENSE.md).
+* This project is licensed under the terms of the [Apache 2.0 license](https://github.com/mitre/aws-rds-microsoft-sql-server-2014-database-stig-baseline/blob/master/LICENSE.md).
 
 ### NOTICE
 
