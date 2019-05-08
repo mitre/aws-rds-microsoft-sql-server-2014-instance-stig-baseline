@@ -178,9 +178,4 @@ include_controls 'microsoft-sql-server-2014-instance-stig-baseline' do
       skip 'This control is not applicable on microsoft sql within aws rds, as aws manages the operating system in which the microsoft sql database is running on'
     end
   end
-
-  include_controls 'microsoft-sql-server-2014-database-stig-baseline' do
-
-  end
-
 end
