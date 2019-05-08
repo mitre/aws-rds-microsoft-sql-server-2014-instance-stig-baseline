@@ -1,4 +1,4 @@
-name: aws-rds-microsoft-sql-server-2014-database-stig-baseline
+name: aws-rds-microsoft-sql-server-2014-instance-stig-baseline
 title: STIG Baseline for AWS RDS Microsoft SQL Server 2014
 maintainer: MITRE InSpec Team
 copyright: The MITRE Corporation, 2018
