@@ -16,11 +16,6 @@ depends:
   git: https://github.com/mitre/microsoft-sql-server-2014-instance-stig-baseline
   branch: master
 
-- name: microsoft-sql-server-2014-database-stig-baseline
-  git: https://github.com/mitre/microsoft-sql-server-2014-database-stig-baseline
-  branch: master
-
-
 attributes:
   - name: user
     description: 'username MSSQL DB Server'
