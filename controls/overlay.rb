@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 
-include_controls 'microsoft-sql-server-2014-instance-stig-baseline'
+include_controls 'microsoft-sql-server-2014-instance-stig-baseline' do
 
   control 'V-67759' do
     query = %(
@@ -179,7 +179,7 @@ include_controls 'microsoft-sql-server-2014-instance-stig-baseline'
     end
   end
 
-  include_controls 'microsoft-sql-server-2014-database-stig-baseline'
+  include_controls 'microsoft-sql-server-2014-database-stig-baseline' do
 
   end
 
