@@ -4,6 +4,8 @@
 include_controls 'microsoft-sql-server-2014-instance-stig-baseline' do
 
   control 'V-67759' do
+    sql_managed_accounts = attribute('sql_managed_accounts')
+
     query = %(
 	  SELECT
 	      name
@@ -12,31 +14,31 @@ include_controls 'microsoft-sql-server-2014-instance-stig-baseline' do
 	  WHERE
 	      type_desc = 'SQL_LOGIN'
 	      AND is_disabled = 0;
-	)
+    )
 
-	sql_session = mssql_session(user: attribute('user'),
-	                              password: attribute('password'),
-	                              host: attribute('host'),
-	                              instance: attribute('instance'),
-	                              port: attribute('port'))
+  	sql_session = mssql_session(user: attribute('user'),
+  	                              password: attribute('password'),
+  	                              host: attribute('host'),
+  	                              instance: attribute('instance'),
+  	                              port: attribute('port'))
 
-	account_list = sql_session.query(query).column('name')
+  	account_list = sql_session.query(query).column('name')
 
-	 if account_list.empty?
-	   impact 0.0
-	   desc 'There are no sql managed accounts, control not applicable'
+  	if account_list.empty?
+  	   impact 0.0
+  	   desc 'There are no sql managed accounts, control not applicable'
 
-	   describe 'There are no sql managed accounts, control not applicable' do
-	     skip 'There are no sql managed accounts, control not applicable'
-	   end
-	 else
-	   account_list.each do |account|
-	     describe "sql managed account: #{account}" do
-	       subject { account }
-	       it { should be_in SQL_MANAGED_ACCOUNTS }
-	     end
-	   end
-	 end
+  	   describe 'There are no sql managed accounts, control not applicable' do
+  	     skip 'There are no sql managed accounts, control not applicable'
+  	   end
+  	 else
+  	   account_list.each do |account|
+  	     describe "sql managed account: #{account}" do
+  	       subject { account }
+  	       it { should be_in sql_managed_accounts }
+  	     end
+  	  end
+  	end
   end
 
   control "V-67789" do
