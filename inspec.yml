@@ -7,7 +7,7 @@ summary: The AWS RDS Microsoft SQL Server 2014 InSpec profile.
 license: Apache-2.0
 summary: An InSpec Compliance Profile
 
-version: 0.2.0
+version: 1.9.1
 inspec_version: ">= 4.0"
   
 depends:
