@@ -12,4 +12,4 @@ inspec_version: ">= 4.0"
   
 depends:
 - name: microsoft-sql-server-2014-instance-stig-baseline
-  url: https://github.com/mitre/microsoft-sql-server-2014-instance-stig-baseline/archive/master.tar.gz
+  url: https://github.com/mitre/microsoft-sql-server-2014-instance-stig-baseline/archive/rds_adjustments.tar.gz
