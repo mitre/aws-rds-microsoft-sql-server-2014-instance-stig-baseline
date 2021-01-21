@@ -7,9 +7,30 @@ summary: The AWS RDS Microsoft SQL Server 2014 InSpec profile.
 license: Apache-2.0
 summary: An InSpec Compliance Profile
 
-version: 1.9.1
+version: 1.9.2
 inspec_version: ">= 4.0"
   
 depends:
 - name: microsoft-sql-server-2014-instance-stig-baseline
   url: https://github.com/mitre/microsoft-sql-server-2014-instance-stig-baseline/archive/rds_adjustments.tar.gz
+  
+inputs:
+  - name: user
+    description: 'username MSSQL DB Server'
+    value: null
+    sensitive: true
+
+  - name: password
+    description: 'password MSSQL DB Server'
+    value: null
+    sensitive: true
+
+  - name: host
+    description: 'hostname MSSQL DB Server'
+    value: null
+    sensitive: true
+
+  - name: instance
+    description: 'instance name MSSQL DB Server'
+    value: null
+    sensitive: true
